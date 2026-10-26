@@ -19,5 +19,6 @@ data/interim/
 Thumbs.db
 desktop.ini
 
-# Salidas temporales
+# Bitácoras de ejecución (se regeneran)
+reports/logs/
 *.log

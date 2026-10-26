@@ -235,6 +235,13 @@ pytest -q
 **Ruta del CSV.** Por defecto `data/raw/Monitoreos_SEDIMENTO.csv`; se puede
 sobreescribir con la variable de entorno `OEFA_CSV`.
 
+**Nota para clones desde GitHub.** El CSV crudo (~98 MB) y los archivos
+intermedios **no se versionan** por tamaño (están en `.gitignore`). Descarga
+`Monitoreos_SEDIMENTO.csv` del portal de datos abiertos del OEFA y guárdalo en
+`data/raw/`. Sin ese archivo el pipeline se detiene en el paso 1. Los artefactos
+de `data/processed/`, `models/` y `reports/` sí se incluyen, de modo que el
+tablero funciona sin reentrenar.
+
 ---
 
 ## 6. Modelos
