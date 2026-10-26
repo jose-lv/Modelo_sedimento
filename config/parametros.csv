@@ -1,0 +1,281 @@
+﻿parametro_original,unidad_original,parametro_estandar,familia,es_concentracion,factor_a_mg_kg,unidad_estandar,conversion_valida,usar_en_modelo,notas,n_registros
+Fizz Rating,kg/TM,Fizz Rating,aba,False,1.0,kg/TM,True,False,,12
+Fizz Rating,sin unidad,Fizz Rating,aba,False,1.0,sin unidad,True,False,,9
+Fizz Rating,,Fizz Rating,aba,False,1.0,,True,False,,0
+Potencial de Acidez Maximo (PAM Basado en Azufre total),,Potencial de Acidez Maximo (PAM Basado en Azufre total),aba,False,1.0,,True,False,,0
+Potencial de Acidez Máximo (MPA),kg/TM,Potencial de Acidez Máximo (MPA),aba,False,1.0,kg/TM,True,False,,21
+Potencial de Acidez Máximo (MPA),t CaCO3/1000t,Potencial de Acidez Máximo (MPA),aba,False,1.0,t CaCO3/1000t,True,False,,1
+Potencial de Neutralizacion (PN),kg/TM,Potencial de Neutralizacion (PN),aba,False,1.0,kg/TM,True,False,,3
+Potencial de Neutralizacion (PN),t CaCO3/1000t,Potencial de Neutralizacion (PN),aba,False,1.0,t CaCO3/1000t,True,False,,1
+Potencial de Neutralización Neto (NNP),kg/TM,Potencial de Neutralización Neto (NNP),aba,False,1.0,kg/TM,True,False,Puede ser negativo,21
+Potencial de Neutralización Neto (NNP),t CaCO3/1000t,Potencial de Neutralización Neto (NNP),aba,False,1.0,t CaCO3/1000t,True,False,Puede ser negativo,1
+Potencial de Neutralización Sobek,kg/TM,Potencial de Neutralización Sobek,aba,False,1.0,kg/TM,True,False,,18
+Potencial de Neutralización Sobek,,Potencial de Neutralización Sobek,aba,False,1.0,,True,False,,0
+Ratio Potencial de Neutralización (RNP),kg/TM,Ratio Potencial de Neutralización (RNP),aba,False,1.0,kg/TM,True,False,Puede ser negativo,12
+Ratio Potencial de Neutralización (RNP),sin unidad,Ratio Potencial de Neutralización (RNP),aba,False,1.0,sin unidad,True,False,Puede ser negativo,9
+Ratio Potencial de Neutralización (RNP),,Ratio Potencial de Neutralización (RNP),aba,False,1.0,,True,False,Puede ser negativo,0
+Relacion PN/PA,mg/L,Relacion PN/PA,aba,False,1.0,mg/L,True,False,,1
+Cianuro Libre,mg/kg,Cianuro Libre,anion,True,1.0,mg/kg,True,False,,3
+Cianuro Total,kg/TM,Cianuro Total,anion,True,1000.0,mg/kg MS,True,False,,1
+Cianuro Total,mg/kg,Cianuro Total,anion,True,1.0,mg/kg,True,False,,16
+Cianuro Total,mg/kg MS,Cianuro Total,anion,True,1.0,mg/kg MS,True,False,,5
+Sulfato Total,%,Sulfato,anion,True,10000.0,mg/kg MS,True,False,,21
+Sulfato(s),mg/kg,Sulfato,anion,True,1.0,mg/kg,True,False,,27
+Sulfato Total,,Sulfato,anion,True,,,False,False,,0
+Sulfuro Total,%,Sulfuro,anion,True,10000.0,mg/kg MS,True,False,,21
+Sulfuro Total,,Sulfuro,anion,True,,,False,False,,0
+Benceno,mg/kg,Benceno,btex,True,1.0,mg/kg,True,False,,29
+Benceno,mg/kg MS,Benceno,btex,True,1.0,mg/kg MS,True,False,,1
+Benceno,,Benceno,btex,True,,,False,False,,0
+Etilbenceno,mg/kg,Etilbenceno,btex,True,1.0,mg/kg,True,False,,29
+Etilbenceno,mg/kg MS,Etilbenceno,btex,True,1.0,mg/kg MS,True,False,,1
+Etilbenceno,,Etilbenceno,btex,True,,,False,False,,0
+Tolueno,mg/L,Tolueno,btex,True,,mg/L,False,False,,1
+Tolueno,mg/kg,Tolueno,btex,True,1.0,mg/kg,True,False,,28
+Tolueno,mg/kg MS,Tolueno,btex,True,1.0,mg/kg MS,True,False,,1
+Tolueno,,Tolueno,btex,True,,,False,False,,0
+Xilenos,mg/kg,Xilenos,btex,True,1.0,mg/kg,True,False,Suma de xilenos,29
+Xilenos,mg/kg MS,Xilenos,btex,True,1.0,mg/kg MS,True,False,Suma de xilenos,1
+Xilenos,,Xilenos,btex,True,,,False,False,Suma de xilenos,0
+"m,p-Xileno",mg/kg,"m,p-Xileno",btex,True,1.0,mg/kg,True,False,,22
+"m,p-Xileno",mg/kg MS,"m,p-Xileno",btex,True,1.0,mg/kg MS,True,False,,1
+"m,p-Xileno",,"m,p-Xileno",btex,True,,,False,False,,0
+m-Xileno,mg/kg,m-Xileno,btex,True,1.0,mg/kg,True,False,,7
+o-Xileno,mg/L,o-Xileno,btex,True,,mg/L,False,False,,2
+o-Xileno,mg/kg,o-Xileno,btex,True,1.0,mg/kg,True,False,,27
+o-Xileno,mg/kg MS,o-Xileno,btex,True,1.0,mg/kg MS,True,False,,1
+o-Xileno,,o-Xileno,btex,True,,,False,False,,0
+p-Xileno,mg/kg,p-Xileno,btex,True,1.0,mg/kg,True,False,,7
+Azufre Total,%,Azufre Total,elemento,True,10000.0,mg/kg MS,True,False,Indicador de sulfuros,22
+Aceites y Grasas,mg/kg MS,Aceites y Grasas,fisico,False,1.0,mg/kg MS,True,False,,1
+pH,Unidad de pH,pH,fisico,False,1.0,Unidad de pH,True,False,,2
+pH Pasta,Unidad de pH,pH pasta,fisico,False,1.0,Unidad de pH,True,False,,1
+pH Pasta,kg/TM,pH pasta,fisico,False,1.0,kg/TM,True,False,,12
+pH Pasta,sin unidad,pH pasta,fisico,False,1.0,sin unidad,True,False,,9
+Aluminio,mg/L,Aluminio,mayor,True,,mg/L,False,True,Litogénico; no compone el índice,19
+Aluminio,mg/kg,Aluminio,mayor,True,1.0,mg/kg,True,True,Litogénico; no compone el índice,179
+Aluminio,mg/kg MS,Aluminio,mayor,True,1.0,mg/kg MS,True,True,Litogénico; no compone el índice,177
+Aluminio,,Aluminio,mayor,True,,,False,True,Litogénico; no compone el índice,0
+Calcio,mg/L,Calcio,mayor,True,,mg/L,False,True,,19
+Calcio,mg/kg,Calcio,mayor,True,1.0,mg/kg,True,True,,180
+Calcio,mg/kg MS,Calcio,mayor,True,1.0,mg/kg MS,True,True,,177
+Calcio,,Calcio,mayor,True,,,False,True,,0
+Fósforo,Intensidad de campo Eléctrico,Fósforo,mayor,True,,Intensidad de campo Eléctrico,False,True,,1
+Fósforo,kg/TM,Fósforo,mayor,True,1000.0,mg/kg MS,True,True,,1
+Fósforo,mg/L,Fósforo,mayor,True,,mg/L,False,True,,19
+Fósforo,mg/kg,Fósforo,mayor,True,1.0,mg/kg,True,True,,173
+Fosforo,mg/kg,Fósforo,mayor,True,1.0,mg/kg,True,True,,4
+Fósforo,mg/kg MS,Fósforo,mayor,True,1.0,mg/kg MS,True,True,,167
+Fosforo,mg/kg MS,Fósforo,mayor,True,1.0,mg/kg MS,True,True,,9
+Fósforo,,Fósforo,mayor,True,,,False,True,,0
+Fosforo,,Fósforo,mayor,True,,,False,True,,0
+Hierro,mg/L,Hierro,mayor,True,,mg/L,False,True,Litogénico; no compone el índice,18
+Hierro,mg/kg,Hierro,mayor,True,1.0,mg/kg,True,True,Litogénico; no compone el índice,179
+Hierro,mg/kg MS,Hierro,mayor,True,1.0,mg/kg MS,True,True,Litogénico; no compone el índice,178
+Hierro,,Hierro,mayor,True,,,False,True,Litogénico; no compone el índice,0
+Magnesio,mg/L,Magnesio,mayor,True,,mg/L,False,True,,19
+Magnesio,mg/kg,Magnesio,mayor,True,1.0,mg/kg,True,True,,178
+Magnesio,mg/kg MS,Magnesio,mayor,True,1.0,mg/kg MS,True,True,,178
+Magnesio,,Magnesio,mayor,True,,,False,True,,0
+Potasio,mg/L,Potasio,mayor,True,,mg/L,False,True,,19
+Potasio,mg/kg,Potasio,mayor,True,1.0,mg/kg,True,True,,178
+Potasio,mg/kg MS,Potasio,mayor,True,1.0,mg/kg MS,True,True,,178
+Potasio,,Potasio,mayor,True,,,False,True,,0
+Silicio,mg/kg,Silicio,mayor,True,1.0,mg/kg,True,True,,62
+Silicio,,Silicio,mayor,True,,,False,True,,0
+Sodio,mg/L,Sodio,mayor,True,,mg/L,False,True,,18
+Sodio,mg/kg,Sodio,mayor,True,1.0,mg/kg,True,True,,178
+Sodio,mg/kg MS,Sodio,mayor,True,1.0,mg/kg MS,True,True,,178
+Sodio,,Sodio,mayor,True,,,False,True,,0
+Titanio,mg/L,Titanio,mayor,True,,mg/L,False,True,,21
+Titanio,mg/kg,Titanio,mayor,True,1.0,mg/kg,True,True,,179
+Titanio,mg/kg MS,Titanio,mayor,True,1.0,mg/kg MS,True,True,,174
+Titanio,,Titanio,mayor,True,,,False,True,,0
+Antimonio,kg/TM,Antimonio,metal,True,1000.0,mg/kg MS,True,True,,1
+Antimonio,mg/L,Antimonio,metal,True,,mg/L,False,True,,18
+Antimonio,mg/kg,Antimonio,metal,True,1.0,mg/kg,True,True,,178
+Antimonio,mg/kg MS,Antimonio,metal,True,1.0,mg/kg MS,True,True,,178
+Antimonio,,Antimonio,metal,True,,,False,True,,0
+Bario,mg/L,Bario,metal,True,,mg/L,False,True,,18
+Bario,mg/kg,Bario,metal,True,1.0,mg/kg,True,True,,187
+Bario,mg/kg MS,Bario,metal,True,1.0,mg/kg MS,True,True,,177
+Bario,,Bario,metal,True,,,False,True,,0
+Berilio,mg/L,Berilio,metal,True,,mg/L,False,True,,18
+Berilio,mg/kg,Berilio,metal,True,1.0,mg/kg,True,True,,179
+Berilio,mg/kg MS,Berilio,metal,True,1.0,mg/kg MS,True,True,,177
+Berilio,,Berilio,metal,True,,,False,True,,0
+Bismuto,mg/kg,Bismuto,metal,True,1.0,mg/kg,True,True,,112
+Bismuto,mg/kg MS,Bismuto,metal,True,1.0,mg/kg MS,True,True,,27
+Bismuto,,Bismuto,metal,True,,,False,True,,0
+Cadmio,mg/L,Cadmio,metal,True,,mg/L,False,True,Índice,19
+Cadmio,mg/kg,Cadmio,metal,True,1.0,mg/kg,True,True,Índice,191
+Cadmio,mg/kg MS,Cadmio,metal,True,1.0,mg/kg MS,True,True,Índice,177
+Cadmio,,Cadmio,metal,True,,,False,True,Índice,0
+Cerio,mg/kg,Cerio,metal,True,1.0,mg/kg,True,True,Tierra rara,25
+Cerio,mg/kg MS,Cerio,metal,True,1.0,mg/kg MS,True,True,Tierra rara,27
+Cerio,,Cerio,metal,True,,,False,True,Tierra rara,0
+Cobalto,mg/L,Cobalto,metal,True,,mg/L,False,True,,19
+Cobalto,mg/kg,Cobalto,metal,True,1.0,mg/kg,True,True,,178
+Cobalto,mg/kg MS,Cobalto,metal,True,1.0,mg/kg MS,True,True,,177
+Cobalto,mg/s,Cobalto,metal,True,,mg/s,False,True,,1
+Cobalto,,Cobalto,metal,True,,,False,True,,0
+Cobre,kg/TM,Cobre,metal,True,1000.0,mg/kg MS,True,True,Índice,2
+Cobre,mg/L,Cobre,metal,True,,mg/L,False,True,Índice,18
+Cobre,mg/kg,Cobre,metal,True,1.0,mg/kg,True,True,Índice,185
+Cobre,mg/kg MS,Cobre,metal,True,1.0,mg/kg MS,True,True,Índice,178
+Cobre,,Cobre,metal,True,,,False,True,Índice,0
+Cromo,mg/L,Cromo,metal,True,,mg/L,False,True,Índice,19
+Cromo,mg/kg,Cromo,metal,True,1.0,mg/kg,True,True,Índice,191
+Cromo,mg/kg MS,Cromo,metal,True,1.0,mg/kg MS,True,True,Índice,177
+Cromo,,Cromo,metal,True,,,False,True,Índice,0
+Cromo Hexavalente,mg/kg,Cromo Hexavalente,metal,True,1.0,mg/kg,True,False,Cobertura mínima,1
+Estaño,kg/TM,Estaño,metal,True,1000.0,mg/kg MS,True,True,,1
+Estaño,mg/L,Estaño,metal,True,,mg/L,False,True,,18
+Estaño,mg/kg,Estaño,metal,True,1.0,mg/kg,True,True,,177
+Estaño,mg/kg MS,Estaño,metal,True,1.0,mg/kg MS,True,True,,178
+Estaño,,Estaño,metal,True,,,False,True,,0
+Estroncio,g,Estroncio,metal,True,,g,False,True,,1
+Estroncio,mg/L,Estroncio,metal,True,,mg/L,False,True,,18
+Estroncio,mg/kg,Estroncio,metal,True,1.0,mg/kg,True,True,,177
+Estroncio,mg/kg MS,Estroncio,metal,True,1.0,mg/kg MS,True,True,,177
+Estroncio,,Estroncio,metal,True,,,False,True,,0
+Litio,mg/L,Litio,metal,True,,mg/L,False,True,,20
+Litio,mg/kg,Litio,metal,True,1.0,mg/kg,True,True,,177
+Litio,mg/kg MS,Litio,metal,True,1.0,mg/kg MS,True,True,,178
+Litio,,Litio,metal,True,,,False,True,,0
+Manganeso,mg/L,Manganeso,metal,True,,mg/L,False,True,Litogénico; no compone el índice,19
+Manganeso,mg/kg,Manganeso,metal,True,1.0,mg/kg,True,True,Litogénico; no compone el índice,178
+Manganeso,mg/kg MS,Manganeso,metal,True,1.0,mg/kg MS,True,True,Litogénico; no compone el índice,178
+Manganeso,,Manganeso,metal,True,,,False,True,Litogénico; no compone el índice,0
+Mercurio,mg/L,Mercurio,metal,True,,mg/L,False,True,Índice,19
+Mercurio,mg/kg,Mercurio,metal,True,1.0,mg/kg,True,True,Índice,190
+Mercurio,mg/kg MS,Mercurio,metal,True,1.0,mg/kg MS,True,True,Índice,178
+Mercurio,,Mercurio,metal,True,,,False,True,Índice,0
+Molibdeno,mg/L,Molibdeno,metal,True,,mg/L,False,True,,18
+Molibdeno,mg/kg,Molibdeno,metal,True,1.0,mg/kg,True,True,,180
+Molibdeno,mg/kg MS,Molibdeno,metal,True,1.0,mg/kg MS,True,True,,177
+Molibdeno,,Molibdeno,metal,True,,,False,True,,0
+Níquel,mg/L,Níquel,metal,True,,mg/L,False,True,Índice,19
+Níquel,mg/kg,Níquel,metal,True,1.0,mg/kg,True,True,Índice,174
+Niquel,mg/kg,Níquel,metal,True,1.0,mg/kg,True,True,Índice,4
+Níquel,mg/kg MS,Níquel,metal,True,1.0,mg/kg MS,True,True,Índice,169
+Niquel,mg/kg MS,Níquel,metal,True,1.0,mg/kg MS,True,True,Índice,9
+Níquel,,Níquel,metal,True,,,False,True,Índice,0
+Niquel,,Níquel,metal,True,,,False,True,Índice,0
+Plata,kg/TM,Plata,metal,True,1000.0,mg/kg MS,True,True,,1
+Plata,mg/L,Plata,metal,True,,mg/L,False,True,,19
+Plata,mg/kg,Plata,metal,True,1.0,mg/kg,True,True,,178
+Plata,mg/kg MS,Plata,metal,True,1.0,mg/kg MS,True,True,,177
+Plata,,Plata,metal,True,,,False,True,,0
+Plomo,mg/L,Plomo,metal,True,,mg/L,False,True,Índice,18
+Plomo,mg/kg,Plomo,metal,True,1.0,mg/kg,True,True,Índice,192
+Plomo,mg/kg MS,Plomo,metal,True,1.0,mg/kg MS,True,True,Índice,178
+Plomo,,Plomo,metal,True,,,False,True,Índice,0
+Talio,kg/TM,Talio,metal,True,1000.0,mg/kg MS,True,True,,1
+Talio,mg/L,Talio,metal,True,,mg/L,False,True,,18
+Talio,mg/kg,Talio,metal,True,1.0,mg/kg,True,True,,177
+Talio,mg/kg MS,Talio,metal,True,1.0,mg/kg MS,True,True,,177
+Talio,,Talio,metal,True,,,False,True,,0
+Torio,mg/kg,Torio,metal,True,1.0,mg/kg,True,True,Radionucleido natural,25
+Torio,mg/kg MS,Torio,metal,True,1.0,mg/kg MS,True,True,Radionucleido natural,27
+Torio,,Torio,metal,True,,,False,True,Radionucleido natural,0
+Uranio,mg/kg,Uranio,metal,True,1.0,mg/kg,True,True,Radionucleido natural,28
+Uranio,mg/kg MS,Uranio,metal,True,1.0,mg/kg MS,True,True,Radionucleido natural,27
+Uranio,,Uranio,metal,True,,,False,True,Radionucleido natural,0
+Vanadio,mg/L,Vanadio,metal,True,,mg/L,False,True,,19
+Vanadio,mg/kg,Vanadio,metal,True,1.0,mg/kg,True,True,,179
+Vanadio,mg/kg MS,Vanadio,metal,True,1.0,mg/kg MS,True,True,,176
+Vanadio,mg/s,Vanadio,metal,True,,mg/s,False,True,,1
+Vanadio,,Vanadio,metal,True,,,False,True,,0
+Wolframio,mg/kg,Wolframio,metal,True,1.0,mg/kg,True,True,,25
+Wolframio,mg/kg MS,Wolframio,metal,True,1.0,mg/kg MS,True,True,,27
+Wolframio,,Wolframio,metal,True,,,False,True,,0
+Zinc,mg/L,Zinc,metal,True,,mg/L,False,True,Índice,19
+Zinc,mg/kg,Zinc,metal,True,1.0,mg/kg,True,True,Índice,184
+Zinc,mg/kg MS,Zinc,metal,True,1.0,mg/kg MS,True,True,Índice,177
+Zinc,,Zinc,metal,True,,,False,True,Índice,0
+Arsénico,Intensidad de campo Eléctrico,Arsénico,metaloide,True,,Intensidad de campo Eléctrico,False,True,Índice,1
+Arsénico,g,Arsénico,metaloide,True,,g,False,True,Índice,1
+Arsénico,kg/TM,Arsénico,metaloide,True,1000.0,mg/kg MS,True,True,Índice,2
+Arsénico,mg/L,Arsénico,metaloide,True,,mg/L,False,True,Índice,18
+Arsénico,mg/kg,Arsénico,metaloide,True,1.0,mg/kg,True,True,Índice,184
+Arsenico,mg/kg,Arsénico,metaloide,True,1.0,mg/kg,True,True,Índice,4
+Arsénico,mg/kg MS,Arsénico,metaloide,True,1.0,mg/kg MS,True,True,Índice,168
+Arsenico,mg/kg MS,Arsénico,metaloide,True,1.0,mg/kg MS,True,True,Índice,9
+Arsénico,,Arsénico,metaloide,True,,,False,True,Índice,0
+Arsenico,,Arsénico,metaloide,True,,,False,True,Índice,0
+Boro,mg/L,Boro,metaloide,True,,mg/L,False,True,,19
+Boro,mg/kg,Boro,metaloide,True,1.0,mg/kg,True,True,,176
+Boro,mg/kg MS,Boro,metaloide,True,1.0,mg/kg MS,True,True,,177
+Boro,,Boro,metaloide,True,,,False,True,,0
+Selenio,mg/L,Selenio,metaloide,True,,mg/L,False,True,,18
+Selenio,mg/kg,Selenio,metaloide,True,1.0,mg/kg,True,True,,178
+Selenio,mg/kg MS,Selenio,metaloide,True,1.0,mg/kg MS,True,True,,177
+Selenio,,Selenio,metaloide,True,,,False,True,,0
+Fracciones de Hidrocarburos F2 (&gt;C10-C28),mg/kg,Fracciones de Hidrocarburos F2 (>C10-C28),otro,False,1.0,mg/kg,True,False,Sin equivalencia en el diccionario,25
+Fracciones de Hidrocarburos F3 (&gt;C28-C40),mg/L,Fracciones de Hidrocarburos F3 (>C28-C40),otro,False,1.0,mg/L,True,False,Sin equivalencia en el diccionario,1
+Fracciones de Hidrocarburos F3 (&gt;C28-C40),mg/kg,Fracciones de Hidrocarburos F3 (>C28-C40),otro,False,1.0,mg/kg,True,False,Sin equivalencia en el diccionario,24
+Acenafteno,mg/kg,Acenafteno,pah,True,1.0,mg/kg,True,False,,34
+Acenafteno,mg/kg MS,Acenafteno,pah,True,1.0,mg/kg MS,True,False,,2
+Acenafteno,,Acenafteno,pah,True,,,False,False,,0
+Acenaftileno,mg/kg,Acenaftileno,pah,True,1.0,mg/kg,True,False,,34
+Acenaftileno,mg/kg MS,Acenaftileno,pah,True,1.0,mg/kg MS,True,False,,2
+Acenaftileno,,Acenaftileno,pah,True,,,False,False,,0
+Antraceno,mg/kg,Antraceno,pah,True,1.0,mg/kg,True,False,,34
+Antraceno,mg/kg MS,Antraceno,pah,True,1.0,mg/kg MS,True,False,,2
+Antraceno,,Antraceno,pah,True,,,False,False,,0
+Benzo(Ghi)perileno,mg/kg,Benzo(Ghi)perileno,pah,True,1.0,mg/kg,True,False,,29
+Benzo(Ghi)perileno,mg/kg MS,Benzo(Ghi)perileno,pah,True,1.0,mg/kg MS,True,False,,2
+Benzo(Ghi)perileno,,Benzo(Ghi)perileno,pah,True,,,False,False,,0
+Benzo(a)antraceno,g,Benzo(a)antraceno,pah,True,,g,False,False,,1
+Benzo(a)antraceno,mg/kg,Benzo(a)antraceno,pah,True,1.0,mg/kg,True,False,,33
+Benzo(a)antraceno,mg/kg MS,Benzo(a)antraceno,pah,True,1.0,mg/kg MS,True,False,,2
+Benzo(a)antraceno,,Benzo(a)antraceno,pah,True,,,False,False,,0
+Benzo(a)pireno,mg/L,Benzo(a)pireno,pah,True,,mg/L,False,False,Cancerígeno; guía CCME,1
+Benzo(a)pireno,mg/kg,Benzo(a)pireno,pah,True,1.0,mg/kg,True,False,Cancerígeno; guía CCME,33
+Benzo(a)pireno,mg/kg MS,Benzo(a)pireno,pah,True,1.0,mg/kg MS,True,False,Cancerígeno; guía CCME,2
+Benzo(a)pireno,,Benzo(a)pireno,pah,True,,,False,False,Cancerígeno; guía CCME,0
+Benzo(b)fluoranteno,mg/kg,Benzo(b)fluoranteno,pah,True,1.0,mg/kg,True,False,,29
+Benzo(b)fluoranteno,mg/kg MS,Benzo(b)fluoranteno,pah,True,1.0,mg/kg MS,True,False,,2
+Benzo(b)fluoranteno,,Benzo(b)fluoranteno,pah,True,,,False,False,,0
+Benzo(k)fluoranteno,mg/kg,Benzo(k)fluoranteno,pah,True,1.0,mg/kg,True,False,,29
+Benzo(k)fluoranteno,mg/kg MS,Benzo(k)fluoranteno,pah,True,1.0,mg/kg MS,True,False,,2
+Benzo(k)fluoranteno,,Benzo(k)fluoranteno,pah,True,,,False,False,,0
+Criseno,mg/kg,Criseno,pah,True,1.0,mg/kg,True,False,,34
+Criseno,mg/kg MS,Criseno,pah,True,1.0,mg/kg MS,True,False,,2
+Criseno,,Criseno,pah,True,,,False,False,,0
+"Dibenzo(a,h)antraceno",mg/L,"Dibenzo(a,h)antraceno",pah,True,,mg/L,False,False,,1
+"Dibenzo(a,h)antraceno",mg/kg,"Dibenzo(a,h)antraceno",pah,True,1.0,mg/kg,True,False,,32
+"Dibenzo(a,h)antraceno",mg/kg MS,"Dibenzo(a,h)antraceno",pah,True,1.0,mg/kg MS,True,False,,2
+"Dibenzo(a,h)antraceno",,"Dibenzo(a,h)antraceno",pah,True,,,False,False,,0
+Fenantreno,mg/kg,Fenantreno,pah,True,1.0,mg/kg,True,False,,34
+Fenantreno,mg/kg MS,Fenantreno,pah,True,1.0,mg/kg MS,True,False,,2
+Fenantreno,,Fenantreno,pah,True,,,False,False,,0
+Fluoranteno,mg/L,Fluoranteno,pah,True,,mg/L,False,False,,1
+Fluoranteno,mg/kg,Fluoranteno,pah,True,1.0,mg/kg,True,False,,33
+Fluoranteno,mg/kg MS,Fluoranteno,pah,True,1.0,mg/kg MS,True,False,,2
+Fluoranteno,,Fluoranteno,pah,True,,,False,False,,0
+Fluoreno,mg/kg,Fluoreno,pah,True,1.0,mg/kg,True,False,,34
+Fluoreno,mg/kg MS,Fluoreno,pah,True,1.0,mg/kg MS,True,False,,2
+Fluoreno,,Fluoreno,pah,True,,,False,False,,0
+"Indeno(1,2,3-cd)pireno",mg/L,"Indeno(1,2,3-cd)pireno",pah,True,,mg/L,False,False,,1
+"Indeno(1,2,3-cd)pireno",mg/kg,"Indeno(1,2,3-cd)pireno",pah,True,1.0,mg/kg,True,False,,28
+"Indeno(1,2,3-cd)pireno",mg/kg MS,"Indeno(1,2,3-cd)pireno",pah,True,1.0,mg/kg MS,True,False,,2
+"Indeno(1,2,3-cd)pireno",,"Indeno(1,2,3-cd)pireno",pah,True,,,False,False,,0
+Naftaleno,mg/L,Naftaleno,pah,True,,mg/L,False,False,,2
+Naftaleno,mg/kg,Naftaleno,pah,True,1.0,mg/kg,True,False,,32
+Naftaleno,mg/kg MS,Naftaleno,pah,True,1.0,mg/kg MS,True,False,,2
+Naftaleno,,Naftaleno,pah,True,,,False,False,,0
+Pireno,mg/kg,Pireno,pah,True,1.0,mg/kg,True,False,,34
+Pireno,mg/kg MS,Pireno,pah,True,1.0,mg/kg MS,True,False,,2
+Pireno,,Pireno,pah,True,,,False,False,,0
+TPH (C6-C40),mg/L,TPH (C6-C40),tph,True,,mg/L,False,False,,1
+TPH (C6-C40),mg/kg,TPH (C6-C40),tph,True,1.0,mg/kg,True,False,,17
+TPH (C6-C40),mg/kg MS,TPH (C6-C40),tph,True,1.0,mg/kg MS,True,False,,2
+Fracciones de Hidrocarburos F1 (C6-C10),mg/L,TPH F1 (C6-C10),tph,True,,mg/L,False,False,,1
+Fracciones de Hidrocarburos F1 (C6-C10),mg/kg,TPH F1 (C6-C10),tph,True,1.0,mg/kg,True,False,,20
+Hidrocarburos Totales de Petroleo F1,mg/kg MS,TPH F1 (C6-C10),tph,True,1.0,mg/kg MS,True,False,,4
+Fracciones de Hidrocarburos F2 (C10-C28),mg/kg,TPH F2 (C10-C28),tph,True,1.0,mg/kg,True,False,,4
+Hidrocarburos Totales de Petroleo F2,mg/kg MS,TPH F2 (C10-C28),tph,True,1.0,mg/kg MS,True,False,,4
+Fracciones de Hidrocarburos F3 (C28-C40),mg/kg,TPH F3 (C28-C40),tph,True,1.0,mg/kg,True,False,,4
+Hidrocarburos Totales de Petroleo F3,mg/kg MS,TPH F3 (C28-C40),tph,True,1.0,mg/kg MS,True,False,,4

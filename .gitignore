@@ -1,0 +1,23 @@
+# Entorno virtual (se recrea con requirements.txt)
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Datos crudos e intermedios: pesados y regenerables con el pipeline
+data/raw/
+data/interim/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Salidas temporales
+*.log

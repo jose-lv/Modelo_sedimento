@@ -1,0 +1,92 @@
+﻿parametro,familia,n_no_nulos,cobertura,min,mediana,max,retenido_analisis,retenido_modelo,pct_censurado
+ANIO,meta,394,1.0,2013.0,2022.0,2026.0,True,True,
+COORD_ESTE,meta,394,1.0,248928.0,339337.0,390329.0,True,True,
+COORD_NORTE,meta,394,1.0,8046787.0,8165037.5,8210084.0,True,True,
+TXZONA,meta,394,1.0,19.0,19.0,19.0,True,True,
+n_censurados,meta,394,1.0,0.0,3.0,29.0,True,True,
+MES_NUM,meta,394,1.0,1.0,6.0,12.0,True,True,
+Plomo,metal,370,0.9391,0.25,17.4,2061.0,True,True,6.76
+Mercurio,metal,368,0.934,0.005,0.1,257.0,True,True,39.67
+Cadmio,metal,368,0.934,0.00035,0.16535,3649.0,True,True,23.1
+Cromo,metal,368,0.934,0.09,6.8055,68.0,True,True,4.35
+Arsénico,metaloide,367,0.9315,0.03,49.4,10000.0,True,True,11.72
+Cobre,metal,365,0.9264,7.4,46.3,12091.0,True,True,0.0
+Bario,metal,364,0.9239,2.875,132.35,1149.0,True,True,0.27
+Zinc,metal,361,0.9162,6.78,37.6,7957.0,True,True,0.0
+Calcio,mayor,357,0.9061,1.04,1625.0,190338.0,True,True,0.0
+Antimonio,metal,357,0.9061,0.00015,0.2569,2463.0,True,True,44.54
+Hierro,mayor,357,0.9061,2.21,23421.0,165171.0,True,True,0.0
+Molibdeno,metal,357,0.9061,0.025,1.5,607.0,True,True,14.57
+Manganeso,metal,356,0.9036,0.77,187.0,4066.0,True,True,0.0
+Magnesio,mayor,356,0.9036,1.123,1323.0,10200.0,True,True,0.0
+Berilio,metal,356,0.9036,0.0005,0.2965,207.0,True,True,30.62
+Estaño,metal,356,0.9036,0.003,0.51075,1651.0,True,True,42.98
+Níquel,metal,356,0.9036,0.003,4.23,108.6,True,True,14.89
+Plata,metal,356,0.9036,0.001,0.229,296.0,True,True,67.98
+Potasio,mayor,356,0.9036,1.02,1452.0,5103.0,True,True,0.0
+Sodio,mayor,356,0.9036,0.5435,321.65,41485.0,True,True,0.0
+Aluminio,mayor,356,0.9036,4.246,8820.0,95746.0,True,True,0.0
+ratio_Fe_Al,meta,356,0.9036,0.0024262785208497245,2.2869770695521803,10379.874696330393,True,True,
+ratio_Mn_Fe,meta,356,0.9036,0.00018,0.012596715521719013,29.02818679007152,True,True,
+Talio,metal,355,0.901,0.0001,0.9612,7757.0,True,True,39.44
+Vanadio,metal,355,0.901,7.4,41.9,205.0,True,True,0.0
+Selenio,metaloide,355,0.901,0.002,2.217,1815.0,True,True,30.42
+Litio,metal,355,0.901,0.241,5.41,2722.0,True,True,21.13
+ratio_Ca_Mg,meta,355,0.901,0.0009662799129804207,1.1851301115241635,416.6666666666667,True,True,
+Cobalto,metal,355,0.901,0.4,4.375,8604.0,True,True,10.7
+Fósforo,mayor,354,0.8985,1.061,617.65,7683.0,True,True,0.0
+Estroncio,metal,354,0.8985,0.387,52.31,9561.0,True,True,0.28
+Titanio,mayor,353,0.8959,2.855,197.0,1498.0,True,True,0.0
+Boro,metaloide,353,0.8959,0.003,7.75,2314.0,True,True,26.06
+Bismuto,metal,139,0.3528,0.1114,3.75,13.9,True,False,61.15
+Silicio,mayor,62,0.1574,247.0,415.05,3060.0,True,False,0.0
+Uranio,metal,55,0.1396,0.0673,0.335,39.5,True,False,0.0
+Wolframio,metal,52,0.132,0.00085,0.020749999999999998,1.1074,True,False,38.46
+Torio,metal,52,0.132,5e-05,2.58465,8.162,True,False,1.92
+Cerio,metal,52,0.132,3.9768,12.665,25.72,True,False,0.0
+Sulfato,anion,48,0.1218,0.05,61.22205,1005.3739,True,False,6.25
+tph_total,meta,47,0.1193,0.15,5.0,29933.0,True,False,
+Pireno,pah,36,0.0914,0.0025,0.0025,2.5,False,False,66.67
+suma_pah16,meta,36,0.0914,0.036000000000000004,0.03925000000000001,56.5025,False,False,
+Antraceno,pah,36,0.0914,0.0025,0.0025,2.5,False,False,86.11
+Criseno,pah,36,0.0914,0.0025,0.0025,2.5,False,False,86.11
+Fluoreno,pah,36,0.0914,0.0025,0.0025,2.5,False,False,72.22
+Acenaftileno,pah,36,0.0914,0.0025,0.0025,5.0,False,False,91.67
+Fenantreno,pah,36,0.0914,0.0025,0.0025,2.62,False,False,69.44
+Acenafteno,pah,36,0.0914,0.0025,0.0025,2.5,False,False,75.0
+Benzo(a)pireno,pah,35,0.0888,0.0025,0.0025,2.5,False,False,100.0
+Benzo(a)antraceno,pah,35,0.0888,0.0025,0.0025,2.5,False,False,100.0
+Fluoranteno,pah,35,0.0888,0.0025,0.0025,2.5,False,False,77.14
+"Dibenzo(a,h)antraceno",pah,34,0.0863,0.00015,0.002,20.0,False,False,97.06
+Naftaleno,pah,34,0.0863,0.0015,0.0015,45.2,False,False,76.47
+Benzo(k)fluoranteno,pah,31,0.0787,0.0025,0.0025,2.5,False,False,100.0
+Benzo(Ghi)perileno,pah,31,0.0787,0.0025,0.0025,2.5,False,False,100.0
+Benzo(b)fluoranteno,pah,31,0.0787,0.0025,0.0025,2.5,False,False,100.0
+Benceno,btex,30,0.0761,0.005,0.005,0.15,False,False,96.67
+Xilenos,btex,30,0.0761,0.005,0.005,60.0,False,False,90.0
+suma_btex,meta,30,0.0761,0.015,0.02,72.55,False,False,
+"Indeno(1,2,3-cd)pireno",pah,30,0.0761,0.0025,0.0025,2.5,False,False,100.0
+Etilbenceno,btex,30,0.0761,0.005,0.005,8.6,False,False,90.0
+Tolueno,btex,29,0.0736,0.005,0.005,5.0,False,False,93.1
+o-Xileno,btex,28,0.0711,0.005,0.005,50.0,False,False,89.29
+TPH F1 (C6-C10),tph,24,0.0609,0.15,0.15,71.0,False,False,79.17
+"m,p-Xileno",btex,23,0.0584,0.005,0.005,5.0,False,False,91.3
+Azufre Total,elemento,22,0.0558,0.05,1.1,7.4,False,False,0.0
+pH pasta,fisico,22,0.0558,2.15,3.38,9.92,False,False,0.0
+Potencial de Neutralización Neto (NNP),aba,22,0.0558,-53.5,-12.9,24.4,False,False,0.0
+Potencial de Acidez Máximo (MPA),aba,22,0.0558,1.55,12.9,53.5,False,False,22.73
+Cianuro Total,anion,22,0.0558,0.15,0.15,26.6,False,False,86.36
+Sulfuro,anion,21,0.0533,0.02,0.41,1.71,False,False,9.52
+Fizz Rating,aba,21,0.0533,0.0,0.0,0.0,False,False,0.0
+Ratio Potencial de Neutralización (RNP),aba,21,0.0533,-80.645,0.0,1.27,False,False,23.81
+TPH (C6-C40),tph,19,0.0482,0.15,30.0,3300.0,False,False,26.32
+Potencial de Neutralización Sobek,aba,18,0.0457,0.0,0.0,8.51,False,False,0.0
+TPH F3 (C28-C40),tph,8,0.0203,2.5,6.7,1174.0,False,False,50.0
+TPH F2 (C10-C28),tph,8,0.0203,2.5,2.95,29933.0,False,False,62.5
+m-Xileno,btex,7,0.0178,0.005,0.005,20.0,False,False,85.71
+p-Xileno,btex,7,0.0178,0.005,0.005,20.0,False,False,85.71
+Potencial de Neutralizacion (PN),aba,4,0.0102,0.5,6.85,24.4,False,False,25.0
+Cianuro Libre,anion,3,0.0076,0.05,0.4,0.4,False,False,100.0
+pH,fisico,2,0.0051,6.93,7.1850000000000005,7.44,False,False,0.0
+Aceites y Grasas,fisico,1,0.0025,1008.0,1008.0,1008.0,False,False,0.0
+Cromo Hexavalente,metal,1,0.0025,0.2,0.2,0.2,False,False,100.0

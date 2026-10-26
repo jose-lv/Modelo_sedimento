@@ -1,0 +1,11 @@
+﻿criterio,cumplido,evidencia
+El CSV crudo se transforma en un dataset ancho con un solo comando,✔,python run_pipeline.py
+Existe un log con el número de filas eliminadas por cada regla,✔,reports/tables/log_limpieza.csv
+El porcentaje de datos censurados por parámetro está documentado,✔,reports/tables/censura_por_parametro.csv
+No hay fuga de datos: el target no depende de las entradas,✔,tests/test_no_leakage.py + verificar_no_fuga()
+Validación agrupada por punto o cuenca,✔,GroupKFold por PUNTO_NORMALIZADO
+"Al menos 3 modelos comparados con R², RMSE y MAE",✔,reports/tables/metricas_cv_regresion_pli.csv
+SHAP generado y los 5 factores principales interpretados,✔,reports/figures/16_shap_summary_*.png
+Mapa con zonas y focos críticos,✔,reports/mapa_focos.html
+Tablero ejecutable localmente,✔,streamlit run app/streamlit_app.py
+README con instrucciones para reproducir todo,✔,README.md

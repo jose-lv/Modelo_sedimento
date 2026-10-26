@@ -1,0 +1,3 @@
+﻿regla,filas_antes,filas_despues,filas_eliminadas,pct_eliminado,motivo
+Filtro matriz = Sedimento,257092,257092,0,0.0,El estudio es de sedimentos; se descartan agua y suelo
+Filtro departamento = Moquegua,257092,14889,242203,94.209,TXUBIGEO (primer segmento); los ubigeos agrupados no se pueden georreferenciar

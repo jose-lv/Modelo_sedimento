@@ -1,0 +1,46 @@
+﻿variable,pct_faltante,n_unicos
+tph_total,95.24,6
+suma_pah16,94.96,13
+Potencial de Neutralización Sobek,94.96,5
+suma_btex,94.68,5
+Cianuro Total,94.4,2
+Ratio Potencial de Neutralización (RNP),94.12,5
+Sulfuro,94.12,18
+Potencial de Neutralización Neto (NNP),93.84,20
+Potencial de Acidez Máximo (MPA),93.84,16
+pH pasta,93.84,20
+Sulfato,86.55,44
+Cerio,85.43,51
+Torio,85.43,51
+Wolframio,85.43,30
+Uranio,84.59,54
+Silicio,82.63,61
+Bismuto,61.06,58
+Boro,1.12,260
+Titanio,1.12,315
+Fósforo,0.84,326
+Estroncio,0.84,340
+ratio_Ca_Mg,0.56,354
+Selenio,0.56,228
+Cobalto,0.56,302
+Vanadio,0.56,167
+Litio,0.56,266
+Talio,0.56,214
+Sodio,0.28,295
+Potasio,0.28,343
+ratio_Mn_Fe,0.28,355
+ratio_Fe_Al,0.28,355
+Manganeso,0.28,308
+Calcio,0.28,345
+Magnesio,0.28,330
+Aluminio,0.28,352
+Bario,0.28,335
+Berilio,0.28,226
+Estaño,0.28,195
+COORD_ESTE,0.0,323
+COORD_NORTE,0.0,317
+ANIO,0.0,12
+MES_NUM,0.0,12
+Molibdeno,0.0,294
+Antimonio,0.0,203
+Hierro,0.0,343

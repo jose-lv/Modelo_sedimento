@@ -1,0 +1,54 @@
+{
+  "tarea": "regresion_pli",
+  "modelo": "XGBRegressor",
+  "top_5": [
+    {
+      "variable": "Hierro",
+      "shap_abs_medio": 0.2038830816745758,
+      "shap_medio": 0.0016933955485001206,
+      "ranking": 1
+    },
+    {
+      "variable": "Molibdeno",
+      "shap_abs_medio": 0.09927870333194733,
+      "shap_medio": -0.00012688810238614678,
+      "ranking": 2
+    },
+    {
+      "variable": "Cobalto",
+      "shap_abs_medio": 0.07493024319410324,
+      "shap_medio": 0.0016061898786574602,
+      "ranking": 3
+    },
+    {
+      "variable": "Talio",
+      "shap_abs_medio": 0.06190868467092514,
+      "shap_medio": 0.00153158709872514,
+      "ranking": 4
+    },
+    {
+      "variable": "Antimonio",
+      "shap_abs_medio": 0.057184167206287384,
+      "shap_medio": 0.005245475098490715,
+      "ranking": 5
+    }
+  ],
+  "muestras_criticas": [
+    {
+      "id_muestra": "0005-8-2019-103|ESP-SED-8|2019-10-18",
+      "shap_total_abs": 1.9043521881103516,
+      "figura": "19_shap_waterfall_regresion_pli_1.png"
+    },
+    {
+      "id_muestra": "0014-5-2023-103|ESP-SED-TJ-1|2023-06-02",
+      "shap_total_abs": 1.8992034196853638,
+      "figura": "19_shap_waterfall_regresion_pli_2.png"
+    },
+    {
+      "id_muestra": "0009-5-2022-103|ESP-SED-6|2022-06-07",
+      "shap_total_abs": 1.8354973793029785,
+      "figura": "19_shap_waterfall_regresion_pli_3.png"
+    }
+  ],
+  "concordancia_top10_shap_vs_permutacion": 9
+}

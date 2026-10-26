@@ -1,0 +1,40 @@
+{
+  "fecha_ejecucion": "2026-10-25T19:46:49.291847",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "plataforma": "Windows-10-10.0.19045-SP0",
+  "pandas": "2.2.2",
+  "numpy": "2.5.4",
+  "scikit_learn": "1.8.0",
+  "semilla": 42,
+  "semillas_cv": [
+    42,
+    7,
+    2026,
+    1234,
+    99
+  ],
+  "n_folds": 5,
+  "csv_crudo": "C:\\Users\\Personal\\Desktop\\2026-2\\Tesis I\\Proyecto\\Dataset\\pmv\\data\\raw\\Monitoreos_SEDIMENTO.csv",
+  "sha256_csv": "4bffdfc3a08526b08c0abae4fd1d1b03c8705571d94d740d3f98ce322ee7a6df",
+  "metodo_censura": "ld_medio",
+  "percentil_fondo": 25,
+  "metales_indice": [
+    "Arsénico",
+    "Cadmio",
+    "Cromo",
+    "Cobre",
+    "Mercurio",
+    "Níquel",
+    "Plomo",
+    "Zinc"
+  ],
+  "cobertura_min_modelo": 0.6,
+  "cobertura_min_analisis": 0.1,
+  "anio_corte_temporal": 2023,
+  "argumentos": {
+    "sin_cache": false,
+    "sin_tunear": false,
+    "sin_patrones": false,
+    "solo_datos": false
+  }
+}

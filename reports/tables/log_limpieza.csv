@@ -1,0 +1,8 @@
+﻿regla,filas_antes,filas_despues,filas_eliminadas,pct_eliminado,motivo
+R1 Consolidar columnas de valor,14889,14889,0,0.0,Una sola columna 'valor' por registro
+R4 Descartar valor no numérico,14889,14889,0,0.0,"Texto, celdas vacías o '-' en todas las columnas de valor"
+R5 Descartar placeholders (0 sin unidad ni signo),14889,12834,2055,13.802,Filas espejo del OEFA: 0.0 sin unidad ni signo que duplican la medición real
+R6 Excluir ensayos de lixiviación (mg/L),12834,12259,575,4.48,Otra matriz de exposición: no comparable con mg/kg de sedimento
+R7a Excluir unidad no convertible,12259,12254,5,0.041,"Unidades como 'g', 'sin unidad' o de campo en concentraciones"
+R7b Excluir concentraciones negativas,12254,12254,0,0.0,Físicamente imposibles; los negativos de ABA (NNP/RNP) se conservan
+"R8 Consolidar duplicados (muestra, parámetro)",12254,12254,0,0.0,Se conserva la mediana; 0 pares tenían valores distintos

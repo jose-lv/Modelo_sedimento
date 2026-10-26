@@ -1,0 +1,7 @@
+﻿cluster,n_muestras,elementos_dominantes,z_max,elementos_depletados,z_min,mediana_global_mg_kg
+0,22,"Antimonio, Plomo, Arsénico, Molibdeno",0.62,"Aluminio, Hierro, Potasio",-3.58,6.76825
+1,178,"Manganeso, Titanio, Magnesio, Calcio",0.55,"Talio, Antimonio, Arsénico",-0.76,10.6875
+2,111,"Plomo, Arsénico, Hierro, Bario",1.02,"Manganeso, Titanio, Cobalto",-0.93,40.724999999999994
+3,24,"Zinc, Cobre, Cadmio, Níquel",2.46,"Mercurio, Bario, Arsénico",-0.24,42.45
+4,36,"Estaño, Talio, Titanio, Antimonio",1.47,"Arsénico, Bario, Plomo",-0.98,9.45
+5,23,"Boro, Mercurio, Sodio, Cobre",2.76,"Titanio, Plomo, Antimonio",-0.72,58.25

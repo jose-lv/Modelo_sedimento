@@ -1,0 +1,31 @@
+# MVP – Contaminación de sedimentos en Moquegua (OEFA)
+# Versiones verificadas en la ejecución de referencia (Windows, Python 3.12).
+
+# Núcleo de datos
+pandas==2.2.2
+numpy==2.5.4
+
+# Modelado
+scikit-learn==1.8.0
+xgboost==3.4.1
+joblib==1.5.3
+
+# Explicabilidad
+shap==0.54.1
+
+# Visualización y mapas
+matplotlib==3.10.9
+seaborn==0.13.2
+folium==0.20.0
+pyproj==3.8.0
+
+# Tablero
+streamlit==1.66.1
+
+# Utilidades
+tabulate==0.10.0        # requerido por DataFrame.to_markdown() en el resumen
+openpyxl==3.1.5         # lectura del diccionario de datos OEFA
+pypdf==6.21.2           # extracción de texto de los PDF de la guía
+
+# Pruebas
+pytest==9.1.1

@@ -1,0 +1,120 @@
+{
+  "tarea": "clasificacion_riesgo",
+  "descripcion": "La muestra supera el PEL (nivel de efecto probable, CCME) de al menos un metal del índice; mismas entradas sin fuga",
+  "target": "excede_pel",
+  "mejor_modelo": "RandomForest",
+  "metrica_principal": "roc_auc_media",
+  "n_muestras": 357,
+  "n_features": 45,
+  "n_grupos": 170,
+  "resumen_cv": [
+    {
+      "modelo": "RandomForest",
+      "n_evaluaciones": 25,
+      "f1_media": 0.9554696533910202,
+      "f1_sd": 0.01950730990176461,
+      "roc_auc_media": 0.9713884205198081,
+      "roc_auc_sd": 0.024282585448454207,
+      "pr_auc_media": 0.9840717351585017,
+      "pr_auc_sd": 0.019094404983940726,
+      "balanced_accuracy_media": 0.9117349914530033,
+      "balanced_accuracy_sd": 0.04483511765096017
+    },
+    {
+      "modelo": "XGBoost",
+      "n_evaluaciones": 25,
+      "f1_media": 0.9614596994491458,
+      "f1_sd": 0.021074216014714417,
+      "roc_auc_media": 0.96444866713947,
+      "roc_auc_sd": 0.0279954635871872,
+      "pr_auc_media": 0.9796118935469028,
+      "pr_auc_sd": 0.02309787594524859,
+      "balanced_accuracy_media": 0.9285579699787074,
+      "balanced_accuracy_sd": 0.03754043578392619
+    },
+    {
+      "modelo": "Regresión logística",
+      "n_evaluaciones": 25,
+      "f1_media": 0.9194847841425232,
+      "f1_sd": 0.03455214512150965,
+      "roc_auc_media": 0.9397436908273522,
+      "roc_auc_sd": 0.03347853711553883,
+      "pr_auc_media": 0.9733370748841342,
+      "pr_auc_sd": 0.018900951867304575,
+      "balanced_accuracy_media": 0.8982024778065214,
+      "balanced_accuracy_sd": 0.04999050921386781
+    },
+    {
+      "modelo": "Prior (baseline)",
+      "n_evaluaciones": 25,
+      "f1_media": 0.8445345896378865,
+      "f1_sd": 0.029718329613470554,
+      "roc_auc_media": 0.5,
+      "roc_auc_sd": 0.0,
+      "pr_auc_media": 0.731996911970845,
+      "pr_auc_sd": 0.044266294198812,
+      "balanced_accuracy_media": 0.5,
+      "balanced_accuracy_sd": 0.0
+    }
+  ],
+  "holdout_temporal": [
+    {
+      "f1": 0.8333333333333334,
+      "balanced_accuracy": 0.5,
+      "roc_auc": 0.5,
+      "pr_auc": 0.7142857142857143,
+      "modelo": "Prior (baseline)",
+      "n_train": 308,
+      "n_test": 49,
+      "anio_corte": 2023
+    },
+    {
+      "f1": 0.8888888888888888,
+      "balanced_accuracy": 0.9,
+      "roc_auc": 0.9428571428571428,
+      "pr_auc": 0.9788362782170832,
+      "modelo": "Regresión logística",
+      "n_train": 308,
+      "n_test": 49,
+      "anio_corte": 2023
+    },
+    {
+      "f1": 0.9117647058823529,
+      "balanced_accuracy": 0.8714285714285714,
+      "roc_auc": 0.9448979591836735,
+      "pr_auc": 0.979264832779569,
+      "modelo": "RandomForest",
+      "n_train": 308,
+      "n_test": 49,
+      "anio_corte": 2023
+    },
+    {
+      "f1": 0.9253731343283582,
+      "balanced_accuracy": 0.9071428571428571,
+      "roc_auc": 0.973469387755102,
+      "pr_auc": 0.9902554597676549,
+      "modelo": "XGBoost",
+      "n_train": 308,
+      "n_test": 49,
+      "anio_corte": 2023
+    }
+  ],
+  "bootstrap_holdout": {
+    "metrica": "roc_auc",
+    "estimacion": 0.9464897977984961,
+    "ic95_inferior": 0.8716167953667954,
+    "ic95_superior": 0.9929878267096311,
+    "n_bootstrap": 1000
+  },
+  "diagnostico_oof": {
+    "roc_auc_oof": 0.9673076923076923
+  },
+  "semillas": [
+    42,
+    7,
+    2026,
+    1234,
+    99
+  ],
+  "n_folds": 5
+}

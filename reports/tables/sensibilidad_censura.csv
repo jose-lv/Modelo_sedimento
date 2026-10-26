@@ -1,0 +1,4 @@
+﻿metodo,factor_LD,mediana_PLI,pct_PLI_mayor_1,spearman_vs_principal
+ld_medio,0.5,2.4449,84.9,1.0
+ld_raiz2,0.7071067811865476,2.3026,83.5,0.9976
+ld_superior,1.0,2.3437,81.6,0.9905

@@ -1,0 +1,132 @@
+{
+  "tarea": "regresion_pli",
+  "descripcion": "log1p(PLI) de 8 metales con guía CCME, predicho con variables que no componen el índice",
+  "target": "PLI_log",
+  "mejor_modelo": "XGBoost",
+  "metrica_principal": "r2_log_media",
+  "n_muestras": 357,
+  "n_features": 45,
+  "n_grupos": 170,
+  "resumen_cv": [
+    {
+      "modelo": "XGBoost",
+      "n_evaluaciones": 25,
+      "r2_log_media": 0.8229110787058822,
+      "r2_log_sd": 0.04306241612010908,
+      "rmse_log_media": 0.26170541027731536,
+      "rmse_log_sd": 0.025076737996175207,
+      "mae_log_media": 0.19673333670976484,
+      "mae_log_sd": 0.019593873153602562,
+      "r2_pli_media": 0.7737508269742216,
+      "r2_pli_sd": 0.07396851868516588,
+      "rmse_pli_media": 1.7018554539322925,
+      "rmse_pli_sd": 0.4120295851130948
+    },
+    {
+      "modelo": "RandomForest",
+      "n_evaluaciones": 25,
+      "r2_log_media": 0.7811777444642908,
+      "r2_log_sd": 0.046315890414396335,
+      "rmse_log_media": 0.2918493259821293,
+      "rmse_log_sd": 0.027555504249324778,
+      "mae_log_media": 0.22219829325332388,
+      "mae_log_sd": 0.02259568854773251,
+      "r2_pli_media": 0.6885063556221658,
+      "r2_pli_sd": 0.08606000952925641,
+      "rmse_pli_media": 2.02035535104303,
+      "rmse_pli_sd": 0.5123143151808949
+    },
+    {
+      "modelo": "Ridge",
+      "n_evaluaciones": 25,
+      "r2_log_media": 0.6747380945938767,
+      "r2_log_sd": 0.08674020661844901,
+      "rmse_log_media": 0.35421447348665525,
+      "rmse_log_sd": 0.03680347299664206,
+      "mae_log_media": 0.27876599452141965,
+      "mae_log_sd": 0.024105668978303685,
+      "r2_pli_media": 0.6062532067483594,
+      "r2_pli_sd": 0.11814259966813023,
+      "rmse_pli_media": 2.259329036816976,
+      "rmse_pli_sd": 0.5435579585799707
+    },
+    {
+      "modelo": "Media (baseline)",
+      "n_evaluaciones": 25,
+      "r2_log_media": -0.031010005953941412,
+      "r2_log_sd": 0.049709015378015184,
+      "rmse_log_media": 0.640480213102873,
+      "rmse_log_sd": 0.06796076416137087,
+      "mae_log_media": 0.535039741229497,
+      "mae_log_sd": 0.05817080596771078,
+      "r2_pli_media": -0.08528326403998668,
+      "r2_pli_sd": 0.0777558199948618,
+      "rmse_pli_media": 3.8207623297503557,
+      "rmse_pli_sd": 0.8678136497673202
+    }
+  ],
+  "holdout_temporal": [
+    {
+      "r2_log": -0.2955345986660223,
+      "rmse_log": 0.5772747652818895,
+      "mae_log": 0.5062001256226879,
+      "r2_pli": -0.08099458089168654,
+      "rmse_pli": 1.9665861932258484,
+      "modelo": "Media (baseline)",
+      "n_train": 308,
+      "n_test": 49,
+      "anio_corte": 2023
+    },
+    {
+      "r2_log": 0.5697069474991153,
+      "rmse_log": 0.3326903718824754,
+      "mae_log": 0.26044757027421733,
+      "r2_pli": 0.22523681369906268,
+      "rmse_pli": 1.6648906551903508,
+      "modelo": "Ridge",
+      "n_train": 308,
+      "n_test": 49,
+      "anio_corte": 2023
+    },
+    {
+      "r2_log": 0.5320200452257806,
+      "rmse_log": 0.34695383402043,
+      "mae_log": 0.26942386927477713,
+      "r2_pli": 0.281906348185056,
+      "rmse_pli": 1.602845901727961,
+      "modelo": "RandomForest",
+      "n_train": 308,
+      "n_test": 49,
+      "anio_corte": 2023
+    },
+    {
+      "r2_log": 0.547070226540458,
+      "rmse_log": 0.3413292453210846,
+      "mae_log": 0.25679343274411953,
+      "r2_pli": 0.2386323963402629,
+      "rmse_pli": 1.650434997060396,
+      "modelo": "XGBoost",
+      "n_train": 308,
+      "n_test": 49,
+      "anio_corte": 2023
+    }
+  ],
+  "bootstrap_holdout": {
+    "metrica": "r2",
+    "estimacion": 0.5357631756608899,
+    "ic95_inferior": 0.29951301807704384,
+    "ic95_superior": 0.7207837470276474,
+    "n_bootstrap": 1000
+  },
+  "diagnostico_oof": {
+    "r2_oof": 0.8407794143500116
+  },
+  "semillas": [
+    42,
+    7,
+    2026,
+    1234,
+    99
+  ],
+  "n_folds": 5
+}
