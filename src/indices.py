@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 
 from . import config as cfg
-from .utils import LOG, guardar_csv
+from .utils import LOG, guardar_csv, leer_csv
 
 #: Nombre en la tabla CCME → nombre canónico del proyecto.
 CCME_A_CANONICO = {
@@ -70,18 +70,40 @@ def _numero_celda(x) -> float:
     return float(m.group(0)) if m else np.nan
 
 
+def _buscar_csv_ccme() -> str | None:
+    """Busca el CSV crudo de CCME en las ubicaciones habituales del proyecto."""
+    candidatos = [
+        cfg.ROOT.parent,
+        cfg.ROOT.parent / "Proyecto" / "Dataset",
+        cfg.DATA_RAW,
+        cfg.ROOT,
+    ]
+    for carpeta in candidatos:
+        encontrados = glob.glob(str(carpeta / "Canadian Council*.csv"))
+        if encontrados:
+            return encontrados[0]
+    return None
+
+
 def cargar_guias_ccme() -> pd.DataFrame:
     """
     Lee el CSV de guías CCME descargado junto al dataset y devuelve una tabla
     en mg/kg con ISQG y PEL de agua dulce (RF-10).
+
+    Si el CSV crudo no está disponible (por ejemplo, en un clon limpio), se
+    usan las guías ya versionadas en ``config/guias_calidad.csv``. Así el
+    pipeline y las pruebas funcionan sin depender de un archivo externo.
     """
-    patron = str(cfg.ROOT.parent / "Canadian Council*.csv")
-    archivos = glob.glob(patron)
-    if not archivos:
-        LOG.warning("No se encontró el CSV de guías CCME en %s; se usará solo el complemento", patron)
+    ruta_ccme = _buscar_csv_ccme()
+    if ruta_ccme is None:
+        ruta_config = cfg.CONFIG_DIR / "guias_calidad.csv"
+        if ruta_config.exists():
+            LOG.info("CSV CCME no encontrado; se usan las guías versionadas en %s", ruta_config.name)
+            return leer_csv(ruta_config)
+        LOG.warning("No se encontró el CSV de guías CCME ni %s; se usará solo el complemento", ruta_config)
         crudo = pd.DataFrame(columns=["Chemical", "Groups", "FW_ISQG", "FW_PEL"])
     else:
-        crudo = pd.read_csv(archivos[0], encoding="utf-8", skiprows=[1])
+        crudo = pd.read_csv(ruta_ccme, encoding="utf-8", skiprows=[1])
         crudo = crudo.rename(columns={
             crudo.columns[0]: "Chemical",
             crudo.columns[1]: "Groups",

@@ -12,6 +12,10 @@ críticas. Lo que cambia respecto del anteproyecto son las **decisiones técnica
 (documentadas en la sección [Decisiones metodológicas](#decisiones-metodológicas)),
 todas trazables a evidencia del propio dataset.
 
+> **Informe completo:** [`reports/INFORME_PROYECTO.md`](reports/INFORME_PROYECTO.md)
+> · [versión HTML autocontenida](reports/INFORME_PROYECTO.html) (figuras incluidas,
+> lista para imprimir o compartir).
+
 ---
 
 ## 1. Resultados en una mirada
@@ -47,12 +51,14 @@ ambientales del OEFA (matriz sedimento). 257 092 filas a nivel nacional.
 | Registro nacional | 257 092 |
 | Moquegua (primer segmento de `TXUBIGEO`) | 14 889 |
 | Tras reglas de limpieza R1–R10 | 12 254 |
-| Dataset ancho (una fila por muestra) | **394 muestras × 101 columnas** |
+| Dataset ancho (una fila por muestra) | **394 muestras × 107 columnas** |
 
-**Verificación del filtro.** Se comprobó que ninguna de las 10 372 filas cuyo
-ubigeo agrupado caía en Moquegua tiene coordenadas dentro de la caja envolvente
-UTM 19S del departamento; filtrar por ubigeo completo habría introducido
-muestras de otras regiones.
+**Verificación del filtro.** 66 680 filas nacionales tienen varios ubigeos
+separados por `/`. De ellas, 10 372 mencionan Moquegua pero pertenecen a otra
+región en su primer segmento: son parte de una supervisión que abarca Amazonas,
+Cajamarca, Lambayeque, Loreto y Piura, y sus coordenadas caen fuera de la caja
+UTM 19S de Moquegua (0 de 10 372 dentro). Filtrar por el texto completo habría
+introducido muestras de todo el país.
 
 ### 2.1 Hallazgo de calidad que cambia el dataset
 
@@ -264,8 +270,8 @@ n = 357 muestras, 45 variables, 25 evaluaciones (5 folds × 5 semillas).
 
 **Diagnóstico fuera de fold** (una predicción por muestra, sin que el modelo la
 haya visto): **R² = 0.841**. En el **hold-out temporal** (2024–2026) el R² cae a
-**0.536** con IC 95 % bootstrap **[0.300, 0.721]**, que es la cifra honesta para
-predecir campañas futuras. Ambas se guardan en
+**0.547** (media bootstrap 0.536; IC 95 % **[0.300, 0.721]**), que es la cifra
+honesta para predecir campañas futuras. Ambas se guardan en
 `reports/tables/resumen_modelo_regresion_pli.json` y alimentan
 `13_predicho_vs_real.png`.
 

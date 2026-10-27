@@ -113,9 +113,11 @@ def filtrar_moquegua(df: pd.DataFrame, bitacora: Bitacora | None = None) -> pd.D
 
     ``TXUBIGEO`` tiene el formato ``DEPARTAMENTO, PROVINCIA, DISTRITO`` y puede
     contener varios ubigeos separados por ``/`` cuando una supervisión abarcó
-    varias zonas. Se toma el **primer** segmento: si no empieza por MOQUEGUA,
-    la coordenada del registro tampoco cae en Moquegua (verificado: 0 de 10 372
-    registros agrupados caen dentro de la caja UTM de la región).
+    varias zonas. Se toma el **primer** segmento porque es el que identifica al
+    departamento del registro. Hay 10 372 filas de sedimento cuyo texto menciona
+    Moquegua pero cuyo primer departamento es otro (una supervisión nacional que
+    abarca Amazonas, Cajamarca, Lambayeque, Loreto y Piura); sus coordenadas
+    caen fuera de la caja UTM de Moquegua (0 de 10 372 dentro).
     """
     ubigeo = df["TXUBIGEO"].astype(str).str.upper()
     primer_departamento = (
