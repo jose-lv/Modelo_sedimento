@@ -1080,7 +1080,45 @@ El mapa interactivo está en:
 reports/mapa_focos.html
 ```
 
-Se abre en cualquier navegador y permite hacer zoom, ver los puntos por nivel de riesgo y consultar los detalles de cada muestra. Es la versión interactiva de las figuras 7 y 8.
+Es un archivo autocontenido (Folium + Leaflet) que se abre en cualquier
+navegador, sin servidor ni dependencias externas. El panel superior derecho
+permite cambiar la variable que colorea los puntos y superponer capas:
+
+| Grupo | Capas |
+|---|---|
+| Observado | riesgo normativo CCME (por defecto), PLI observado |
+| Patrones (no son riesgo) | cluster K-Means, cluster GMM |
+| Predicho | PLI predicho, probabilidad de exceder ≥ 1 PEL, clase predicha |
+
+Tres decisiones evitan lecturas engañosas:
+
+- **Los clusters no son niveles de riesgo.** La paleta de clusters es distinta
+  de la escala CCME y la leyenda lo indica de forma explícita. Un cluster
+  describe una firma química —por ejemplo, Sb–Pb–As–Mo— y puede contener
+  muestras de riesgo bajo y muy alto a la vez.
+- **Las predicciones son honestas.** Para las 357 muestras con predicción se usa
+  la predicción fuera de fold (OOF), generada por un modelo que nunca vio la
+  muestra. Si el archivo OOF no está disponible, se recurre al modelo final y
+  el popup lo etiqueta como `modelo final (in-sample)`. El PLI OOF se convierte
+  de la escala `log1p` con `expm1` antes de mapearlo. Las 37 muestras sin
+  variables suficientes quedan en gris y sin predicción.
+- **La clase predicha no es un nivel normativo.** Es la salida binaria del
+  clasificador (`excede ≥ 1 PEL` / `no excede`) con umbral 0,5; no reemplaza la
+  escala CCME de cuatro niveles.
+
+La casilla de anomalías superpone 20 anillos negros discontinuos (Isolation
+Forest, percentil 95). Una anomalía química no equivale a riesgo alto: puede ser
+un valor atípico de un metal no normado. Las celdas de 5 × 5 km se pueden
+mostrar como top 15 críticas o como las 57 celdas con datos; su geometría se
+reconstruye con las cuatro esquinas UTM de `GRID_5KM` y se reproyecta a
+lat/lon, no como un rectángulo aproximado.
+
+El popup de cada muestra reúne punto, distrito, fecha, nivel CCME, PLI, RI,
+metales sobre PEL/ISQG, metal dominante normativo, metal enriquecido por CF,
+clusters K-Means y GMM, anomalía y predicciones con su fuente. Es la versión
+interactiva de las figuras 7 y 8 y mantiene la misma paleta y el mismo popup
+enriquecido del tablero de Streamlit; el tablero conserva la vista simple por
+riesgo y ofrece la descarga del HTML completo con todas las capas.
 
 ---
 
@@ -1097,7 +1135,7 @@ streamlit run app/streamlit_app.py
 Tiene cinco pantallas:
 
 1. **Resumen:** KPIs, distribución del nivel de riesgo y metales sobre PEL.
-2. **Mapa:** puntos coloreados por nivel normativo, con filtros.
+2. **Mapa:** puntos coloreados por nivel normativo, con filtros, popup enriquecido y descarga del HTML completo con capas de clusters, predicciones, anomalías y celdas.
 3. **Ranking:** puntos críticos, zonas de 5 × 5 km, metal dominante normativo, metal enriquecido por CF y variable SHAP dominante.
 4. **Modelo:** métricas de CV, hold-out, bootstrap, SHAP y permutación.
 5. **Datos:** explorador, calidad de datos y descarga del subconjunto filtrado.
@@ -1107,14 +1145,14 @@ El tablero es de **solo lectura**: consume los artefactos del pipeline, no reent
 ### 12.2 Pruebas
 
 ```bash
-pytest -q
+python -m pytest -q
 ```
 
-Resultado: **19 pruebas aprobadas**.
+Resultado: **23 pruebas aprobadas**.
 
 - `tests/test_no_leakage.py`: los 8 metales del índice y sus derivadas nunca entran como features; `verificar_no_fuga` aborta; ninguna feature reproduce el PLI.
 - `tests/test_indices.py`: PLI = media geométrica de CF, Igeo = log2(CF/1.5), RI ponderado por toxicidad, mínimo de 4 metales, cortes de nivel y coherencia PEL > ISQG.
-- `tests/test_report.py`: las zonas se agregan y ordenan por severidad; el ranking usa `metal_dominante_normativo` y conserva el CF como columna aparte.
+- `tests/test_report.py`: las zonas se agregan y ordenan por severidad; `top=None` devuelve todas las celdas; el ranking usa `metal_dominante_normativo` y conserva el CF como columna aparte; la geometría de 5 × 5 km usa cuatro esquinas UTM; el mapa genera capas, leyendas y controles; las predicciones se unen por `id_muestra`.
 
 ### 12.3 Reproducibilidad
 
@@ -1165,7 +1203,7 @@ Ningún resultado debe leerse sin estas advertencias.
 4. **Hay seis patrones químicos.** Los clusters 3 (Zn–Cu–Cd–Ni) y 5 (B–Hg–Na–Cu) tienen los PLI más altos; el cluster 1 (Mn–Ti–Mg–Ca) es el fondo.
 5. **Los modelos predicen bien.** XGBoost alcanza R²(log) = 0.823 en CV y 0.547 en hold-out temporal; Random Forest alcanza ROC-AUC = 0.971 en CV y 0.946 en hold-out.
 6. **La señal es geoquímica, no una fuga.** Fe, Mo, Co, Tl y Sb son las variables más influyentes; ninguna pertenece a los 8 metales del índice. El patrón es compatible con un sistema mineralizado.
-7. **El producto es usable.** Pipeline reproducible, 19 pruebas, tablero de 5 pantallas, mapas y tablas exportables.
+7. **El producto es usable.** Pipeline reproducible, 23 pruebas, tablero de 5 pantallas, mapas y tablas exportables.
 8. **El siguiente paso es la validación de campo.** Las zonas y anomalías deben verificarse con muestreo dirigido, análisis mineralógico y, si es posible, isótopos o modelamiento de fuentes.
 
 ---
@@ -1269,7 +1307,7 @@ python run_pipeline.py --solo-datos
 streamlit run app/streamlit_app.py
 
 # 5. Pruebas
-pytest -q
+python -m pytest -q
 ```
 
 ---

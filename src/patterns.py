@@ -156,6 +156,8 @@ def ejecutar(riesgo: pd.DataFrame, cobertura: pd.DataFrame) -> pd.DataFrame:
         "anomalia_score": score,
         "es_anomalia": score >= umbral,
     }, index=X.index)
+    if "id_muestra" in riesgo.columns:
+        res.insert(0, "id_muestra", riesgo.loc[X.index, "id_muestra"].to_numpy())
 
     perfil, perfil_z = _perfil_clusters(riesgo, params, km.labels_)
     guardar_csv(perfil, cfg.TABLES / "perfil_clusters.csv")

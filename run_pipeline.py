@@ -171,16 +171,15 @@ def main() -> int:
     # 9. Mapa, ranking y exportación (RF-16, RF-18)
     # ------------------------------------------------------------------
     with paso("9. Mapa de focos, ranking y exportación"):
-        pred_principal = predicciones[tarea_principal]
         ranking = report.ranking_puntos(riesgo, top=10)
         ranking = report.ranking_con_shap(ranking, resultado_shap["contribucion"])
         guardar_csv(ranking, cfg.TABLES / "ranking_puntos_criticos.csv")
         zonas = report.zonas_criticas(riesgo, top=15)
         if not zonas.empty:
             guardar_csv(zonas, cfg.TABLES / "zonas_criticas.csv")
-        report.mapa_folium(riesgo, resultado_patrones)
+        report.mapa_folium(riesgo, resultado_patrones, predicciones)
         final = report.exportar_dataset_final(
-            riesgo, resultado_patrones, pred_principal
+            riesgo, resultado_patrones, predicciones
         )
         LOG.info("Dataset final: %d filas × %d columnas", *final.shape)
 

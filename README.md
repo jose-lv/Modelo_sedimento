@@ -165,6 +165,41 @@ absoluta pequeña puede producir un CF alto. Por eso el **ranking de puntos, las
 zonas críticas y el mapa** usan `metal_dominante_normativo`; el CF se mantiene
 como indicador de enriquecimiento relativo.
 
+### 3.8 Mapa interactivo con capas
+
+`reports/mapa_focos.html` es un archivo autocontenido (Folium + Leaflet) que se
+abre en cualquier navegador. El panel superior derecho permite cambiar la
+variable que colorea los puntos:
+
+| Grupo | Capas |
+|---|---|
+| Observado | riesgo normativo CCME (por defecto), PLI observado |
+| Patrones (no son riesgo) | cluster K-Means, cluster GMM |
+| Predicho | PLI predicho, probabilidad de exceder ≥ 1 PEL, clase predicha |
+
+Decisiones de lectura:
+
+- **Clusters ≠ riesgo.** La paleta de clusters es distinta de la escala CCME y
+  la leyenda lo advierte: un cluster describe una firma química (p. ej.
+  Sb–Pb–As–Mo), no un nivel de peligro.
+- **Predicciones honestas.** Para las muestras con predicción fuera de fold
+  (OOF) se usa esa predicción; si el archivo OOF no está disponible, se usa la
+  del modelo final y el popup indica `modelo final (in-sample)`. El PLI OOF se
+  convierte de `log1p` con `expm1` antes de mapearlo.
+- **Anomalías.** La casilla superpone 20 anillos negros discontinuos
+  (Isolation Forest, percentil 95). Una anomalía química no equivale a riesgo
+  alto; puede ser un valor atípico de un metal no normado.
+- **Celdas de 5 × 5 km.** Se pueden mostrar las 15 celdas críticas o las 57
+  celdas con datos. La geometría se reconstruye con las cuatro esquinas UTM de
+  `GRID_5KM` y se reproyecta a lat/lon, no como un rectángulo aproximado.
+- **Trazabilidad.** El popup muestra muestra, distrito, fecha, nivel CCME, PLI,
+  RI, metales sobre PEL/ISQG, metal dominante normativo, metal enriquecido por
+  CF, clusters, anomalía, predicciones y la fuente de cada predicción.
+
+El tablero de Streamlit mantiene la vista simple por riesgo normativo y el
+mismo popup enriquecido; el botón de descarga entrega el HTML completo con
+todas las capas.
+
 ---
 
 ## 4. Estructura del proyecto
@@ -202,7 +237,7 @@ pmv/
     ├── figures/               # PNG para el documento
     ├── tables/                # CSV/JSON con todas las métricas
     ├── logs/                  # bitácoras de ejecución
-    ├── mapa_focos.html        # mapa interactivo
+    ├── mapa_focos.html        # mapa interactivo con capas y predicciones
     └── RESUMEN_MVP.md         # resumen autogenerado con cifras
 ```
 
@@ -226,7 +261,7 @@ python run_pipeline.py --solo-datos
 streamlit run app/streamlit_app.py
 
 # 5. Pruebas
-pytest -q
+python -m pytest -q
 ```
 
 **Opciones del pipeline**
@@ -367,7 +402,7 @@ El tablero es **de solo lectura**: consume los artefactos del pipeline.
 ## 8. Pruebas
 
 ```bash
-pytest -q     # 19 pruebas
+python -m pytest -q     # 23 pruebas
 ```
 
 - `tests/test_no_leakage.py` — los 8 metales del índice y sus derivadas nunca
@@ -376,8 +411,11 @@ pytest -q     # 19 pruebas
 - `tests/test_indices.py` — PLI = media geométrica de CF, Igeo = log2(CF/1.5),
   RI ponderado por toxicidad, mínimo de 4 metales, cortes de nivel, coherencia
   PEL > ISQG en las guías.
-- `tests/test_report.py` — las zonas se agregan y ordenan por severidad; el
-  ranking usa `metal_dominante_normativo` y conserva el CF como columna aparte.
+- `tests/test_report.py` — las zonas se agregan y ordenan por severidad;
+  `top=None` devuelve todas las celdas; el ranking usa
+  `metal_dominante_normativo` y conserva el CF como columna aparte; la geometría
+  de 5 × 5 km usa cuatro esquinas UTM; el mapa genera capas, leyendas y
+  controles; las predicciones se unen por `id_muestra`.
 
 ---
 

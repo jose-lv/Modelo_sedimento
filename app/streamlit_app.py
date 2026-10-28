@@ -29,7 +29,7 @@ REPORTS = ROOT / "reports"
 
 COLORES_NIVEL = {
     "Bajo": "#2c7bb6",
-    "Medio": "#e6c229",
+    "Medio": "#ffffbf",
     "Alto": "#fdae61",
     "Muy alto": "#d7191c",
     "Sin dato": "#bdbdbd",
@@ -227,7 +227,9 @@ def pantalla_mapa(df: pd.DataFrame):
 
     st.caption(
         "Color = nivel de riesgo normativo (CCME ISQG/PEL). "
-        "Pasa el cursor por un punto para ver metales sobre PEL, PLI y cluster."
+        "Pasa el cursor por un punto para ver metales sobre PEL, PLI, clusters y "
+        "predicciones. El mapa HTML descargable permite alternar riesgo, PLI, "
+        "clusters, predicciones, anomalías y celdas de 5 × 5 km."
     )
 
     try:
@@ -246,6 +248,12 @@ def pantalla_mapa(df: pd.DataFrame):
     lat, lon = utm_a_latlon(d["COORD_ESTE"], d["COORD_NORTE"], zona=zona)
     d["lat"], d["lon"] = lat, lon
 
+    def _num(valor, dec: int = 2) -> str:
+        try:
+            return f"{float(valor):.{dec}f}" if pd.notna(valor) else "s/d"
+        except (TypeError, ValueError):
+            return "s/d"
+
     mapa = folium.Map(
         location=[float(d["lat"].mean()), float(d["lon"].mean())],
         zoom_start=10, tiles="OpenStreetMap",
@@ -254,19 +262,43 @@ def pantalla_mapa(df: pd.DataFrame):
         nivel = str(r.get("nivel_riesgo", "Sin dato"))
         color = COLORES_NIVEL.get(nivel, "#777777")
         pli_v = pd.to_numeric(pd.Series([r.get("PLI")]), errors="coerce").iloc[0]
+        pli_pred = pd.to_numeric(
+            pd.Series([r.get("PLI_predicho_mapa", r.get("PLI_predicho"))]),
+            errors="coerce",
+        ).iloc[0]
+        prob = pd.to_numeric(
+            pd.Series([r.get("prob_riesgo_alto_mapa", r.get("prob_riesgo_alto"))]),
+            errors="coerce",
+        ).iloc[0]
+        clase = pd.to_numeric(
+            pd.Series([r.get("clase_predicha_mapa", r.get("clase_predicha"))]),
+            errors="coerce",
+        ).iloc[0]
+        clase_txt = "s/d" if pd.isna(clase) else (
+            "Excede ≥1 PEL" if float(clase) >= 0.5 else "No excede PEL"
+        )
+        anom = str(r.get("es_anomalia", False)).lower() in {"true", "1", "sí", "si"}
+        fuente = r.get("fuente_pli")
+        if not isinstance(fuente, str) or not fuente.strip():
+            fuente = "sin predicción"
         popup = (
             f"<b>{r.get('PUNTO_NORMALIZADO', '')}</b><br>"
             f"{r.get('DISTRITO', '')} · {str(r.get('fecha', ''))[:10]}<br>"
             f"Nivel: <b>{nivel}</b><br>"
             f"Metales &gt; PEL: {r.get('n_metales_sobre_pel', 's/d')} / 8<br>"
-            f"PLI: {f'{pli_v:.2f}' if pd.notna(pli_v) else 's/d'}<br>"
+            f"PLI: {_num(pli_v)} · RI: {_num(r.get('RI'), 0)}<br>"
             f"Metal dominante (norma): {r.get('metal_dominante_normativo', 's/d')}<br>"
-            f"Cluster: {r.get('cluster_kmeans', 's/d')}"
+            f"Cluster K-Means: {r.get('cluster_kmeans', 's/d')} · "
+            f"GMM: {r.get('cluster_gmm', 's/d')}<br>"
+            f"Anomalía: {'Sí' if anom else 'No'}<br>"
+            f"PLI predicho: {_num(pli_pred)} ({fuente})<br>"
+            f"Prob. exceder PEL: {_num(prob, 3)}<br>"
+            f"Clase predicha: {clase_txt}"
         )
         folium.CircleMarker(
             location=[r["lat"], r["lon"]], radius=5,
             color=color, weight=1, fill=True, fill_color=color, fill_opacity=0.85,
-            popup=folium.Popup(popup, max_width=280),
+            popup=folium.Popup(popup, max_width=300),
         ).add_to(mapa)
 
     leyenda = "".join(

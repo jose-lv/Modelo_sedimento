@@ -423,12 +423,15 @@ def entrenar_tarea(matriz: dict, tarea: str, tunear: bool = True) -> dict:
             matriz["y"].astype(int), oof_proba, auc_oof,
             titulo="Curva ROC fuera de fold",
         )
+    datos_oof = {}
+    if "id_muestra" in matriz["meta"].columns:
+        datos_oof["id_muestra"] = matriz["meta"]["id_muestra"].to_numpy()
+    datos_oof["y_observado"] = matriz["y"].to_numpy()
+    datos_oof["y_predicho_oof"] = oof
+    if oof_proba is not None:
+        datos_oof["proba_oof"] = oof_proba
     guardar_csv(
-        pd.DataFrame({
-            "y_observado": matriz["y"].to_numpy(),
-            "y_predicho_oof": oof,
-            **({"proba_oof": oof_proba} if oof_proba is not None else {}),
-        }),
+        pd.DataFrame(datos_oof),
         cfg.TABLES / f"predicciones_oof_{tarea}.csv",
     )
 
