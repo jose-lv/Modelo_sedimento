@@ -234,7 +234,7 @@ def pantalla_mapa(df: pd.DataFrame):
 
     try:
         import folium
-        from src.report import utm_a_latlon
+        from src.report import mapa_base, utm_a_latlon
     except Exception as exc:  # pragma: no cover
         st.warning(f"No se pudo cargar folium/pyproj: {exc}")
         return
@@ -254,9 +254,8 @@ def pantalla_mapa(df: pd.DataFrame):
         except (TypeError, ValueError):
             return "s/d"
 
-    mapa = folium.Map(
-        location=[float(d["lat"].mean()), float(d["lon"].mean())],
-        zoom_start=10, tiles="OpenStreetMap",
+    mapa = mapa_base(
+        [float(d["lat"].mean()), float(d["lon"].mean())], zoom_start=10
     )
     for _, r in d.iterrows():
         nivel = str(r.get("nivel_riesgo", "Sin dato"))

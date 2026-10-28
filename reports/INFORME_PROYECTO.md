@@ -1081,7 +1081,9 @@ reports/mapa_focos.html
 ```
 
 Es un archivo autocontenido (Folium + Leaflet) que se abre en cualquier
-navegador, sin servidor ni dependencias externas. El panel superior derecho
+navegador, sin servidor ni dependencias externas. El mapa base es el lienzo
+claro de Esri con etiquetas de referencia; se evita OpenStreetMap porque bloquea
+sus teselas cuando el HTML se abre con `file://`. El panel superior derecho
 permite cambiar la variable que colorea los puntos y superponer capas:
 
 | Grupo | Capas |

@@ -168,8 +168,10 @@ como indicador de enriquecimiento relativo.
 ### 3.8 Mapa interactivo con capas
 
 `reports/mapa_focos.html` es un archivo autocontenido (Folium + Leaflet) que se
-abre en cualquier navegador. El panel superior derecho permite cambiar la
-variable que colorea los puntos:
+abre en cualquier navegador. El mapa base es el lienzo claro de Esri con
+etiquetas de referencia; se evita OpenStreetMap porque bloquea sus teselas
+cuando el HTML se abre con `file://`. El panel superior derecho permite cambiar
+la variable que colorea los puntos:
 
 | Grupo | Capas |
 |---|---|

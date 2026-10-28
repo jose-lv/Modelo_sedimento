@@ -128,6 +128,11 @@ def test_mapa_folium_incluye_controles_y_capas(tmp_path):
     assert "Anomalías (Isolation Forest)" in texto
     assert "no equivalen a niveles de riesgo" in texto
 
+    # El mapa base debe abrirse con file://: OpenStreetMap bloquea sus teselas.
+    assert "World_Light_Gray_Base" in texto
+    assert "World_Light_Gray_Reference" in texto
+    assert "tile.openstreetmap.org" not in texto
+
 
 def test_exportar_dataset_final_une_predicciones_por_id(tmp_path, monkeypatch):
     riesgo = _riesgo_sintetico().iloc[[0, 2, 4]].reset_index(drop=True)

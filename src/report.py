@@ -759,6 +759,36 @@ window.addEventListener('load', function () {{
 # --------------------------------------------------------------------------
 # Mapa interactivo
 # --------------------------------------------------------------------------
+def mapa_base(centro, zoom_start: int = 10):
+    """
+    Mapa Folium con lienzo claro de Esri y etiquetas de referencia.
+
+    Se evita OpenStreetMap porque sus servidores bloquean las teselas cuando
+    el HTML se abre con ``file://`` (sin Referer HTTP). El lienzo de Esri
+    responde sin ese requisito y mantiene los puntos legibles.
+    """
+    import folium
+
+    mapa = folium.Map(
+        location=centro,
+        zoom_start=zoom_start,
+        tiles="Esri WorldGrayCanvas",
+        attr="Tiles © Esri — Esri, DeLorme, NAVTEQ",
+        control_scale=True,
+    )
+    folium.TileLayer(
+        tiles=(
+            "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/"
+            "World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+        ),
+        attr="Labels © Esri",
+        name="Etiquetas",
+        overlay=True,
+        control=False,
+    ).add_to(mapa)
+    return mapa
+
+
 def mapa_folium(riesgo: pd.DataFrame, patrones: pd.DataFrame | None = None,
                 predicciones=None, ruta=None) -> str | None:
     """
@@ -807,9 +837,7 @@ def mapa_folium(riesgo: pd.DataFrame, patrones: pd.DataFrame | None = None,
     etiquetas_km = _etiquetas_clusters(_cargar_perfil_clusters())
 
     centro = [float(d["lat"].mean()), float(d["lon"].mean())]
-    mapa = folium.Map(
-        location=centro, zoom_start=10, tiles="OpenStreetMap", control_scale=True
-    )
+    mapa = mapa_base(centro, zoom_start=10)
 
     # Celdas 5 × 5 km: se dibujan debajo de los puntos.
     zonas = zonas_criticas(riesgo, top=None)
